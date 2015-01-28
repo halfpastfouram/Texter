@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/bobkruithof/Android Studio Workspace/Texter/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="7ae2d38807a43b2f2185ff4089a92c790b579e54">
+        <dex dex="/Users/bobkruithof/Android Studio Workspace/Texter/app/build/intermediates/pre-dexed/debug/classes-49ecf9f9b2e34458cdbe7022886ca83edf7a542e.jar" />
+    </item>
+    <item
+        jar="/Users/bobkruithof/Android Studio Workspace/Texter/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.2/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="d1bf02de1c56d942e7a9d093b8610ba1ef4128e3">
+        <dex dex="/Users/bobkruithof/Android Studio Workspace/Texter/app/build/intermediates/pre-dexed/debug/classes-cc7302b5b7ece304d64c02b1ccbc05753cf72cf1.jar" />
+    </item>
+    <item
+        jar="/Users/bobkruithof/Documents/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.2/support-annotations-21.0.2.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="99373741f99a0556ee293c41e8faa1ca3ae8a4e6">
+        <dex dex="/Users/bobkruithof/Android Studio Workspace/Texter/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.2-123f8e1db61a7243088a420ed0f24eee9f0f4f36.jar" />
+    </item>
+    <item
+        jar="/Users/bobkruithof/Android Studio Workspace/Texter/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="dd9247ea0fabe8ee479638c4b4a23e93752be256">
+        <dex dex="/Users/bobkruithof/Android Studio Workspace/Texter/app/build/intermediates/pre-dexed/debug/classes-b0bb075a8c2fdbce66086297293fda9f6906ed18.jar" />
+    </item>
+    <item
+        jar="/Users/bobkruithof/Android Studio Workspace/Texter/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.2/libs/internal_impl-21.0.2.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="962e8b12569c56dbdcf8367eb4eac8bb129cd18f">
+        <dex dex="/Users/bobkruithof/Android Studio Workspace/Texter/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.2-d4f00a098888f2ec21baf0aa06a04b2d0f2f490f.jar" />
+    </item>
+
+</items>
