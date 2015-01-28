@@ -13,7 +13,11 @@ import am.halfpastfour.android.apps.data.SMSData;
 import am.halfpastfour.texter.lib.Models.MainListViewModel;
 import am.halfpastfour.texter.lib.SMSAdapter;
 
-
+/**
+ * Created by bobkruithof on 27/01/15.
+ * Project: Texter
+ * Package: am.halfpastfour.android.apps.data
+ */
 public class MainActivity extends ActionBarActivity
 {
 	@Override

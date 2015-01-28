@@ -22,7 +22,9 @@ import am.halfpastfour.android.apps.data.SMSData;
 import am.halfpastfour.texter.R;
 
 /**
- * Created by bobkruithof on 25/01/15.
+ * Created by bobkruithof on 27/01/15.
+ * Project: Texter
+ * Package: am.halfpastfour.android.apps.data
  */
 public class SMSAdapter extends ArrayAdapter<SMSConversation>
 {

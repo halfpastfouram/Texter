@@ -1,9 +1,5 @@
 package am.halfpastfour.texter.lib;
 
-/**
- * Created by bobkruithof on 11/01/15.
- */
-
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -13,6 +9,11 @@ import android.graphics.RectF;
 import android.graphics.Bitmap.Config;
 import android.graphics.PorterDuff.Mode;
 
+/**
+ * Created by bobkruithof on 27/01/15.
+ * Project: Texter
+ * Package: am.halfpastfour.android.apps.data
+ */
 public class ImageHelper {
 	public static Bitmap getRoundedCornerBitmap(Bitmap bitmap, int pixels) {
 		Bitmap output = Bitmap.createBitmap(bitmap.getWidth(), bitmap

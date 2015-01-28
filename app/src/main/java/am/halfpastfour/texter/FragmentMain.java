@@ -16,7 +16,9 @@ import android.widget.ListView;
 import am.halfpastfour.texter.lib.ImageHelper;
 
 /**
- * Created by bobkruithof on 11/01/15.
+ * Created by bobkruithof on 27/01/15.
+ * Project: Texter
+ * Package: am.halfpastfour.android.apps.data
  */
 public class FragmentMain extends ListFragment
 {

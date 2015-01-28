@@ -32,7 +32,6 @@ public class MainListViewModel
 		context.startManagingCursor( cursor );
 
 		int totalConversations	= cursor.getCount();
-		Log.d( "getAllSmsConversations: total amount of conversations found", String.valueOf( totalConversations ) );
 		if( cursor.moveToFirst() ) {
 			for( int i = 0; i < totalConversations; i++ ) {
 				smsConversation	= new SMSConversation( cursor );
@@ -41,8 +40,6 @@ public class MainListViewModel
 			}
 		}
 		cursor.close();
-
-		Log.i( "getAllSmsConversations", "Returning ArrayList with " + String.valueOf( conversations.size() ) + " elements" );
 
 		return conversations;
 	}
@@ -66,7 +63,6 @@ public class MainListViewModel
 		}, null, null, Telephony.Sms.DEFAULT_SORT_ORDER );
 
 		int totalMessages	= cursor.getCount();
-		Log.d( "getAllSmsInConversation: total amount of messages found", String.valueOf( totalMessages ) );
 		if( cursor.moveToFirst() ) {
 			for( int i = 0; i < totalMessages; i++ ) {
 				message	= new SMSData( cursor );
@@ -75,8 +71,6 @@ public class MainListViewModel
 			}
 		}
 		cursor.close();
-
-		Log.i( "getAllSmsInConversation", "Returning ArrayList with " + String.valueOf( messages.size() ) + " elements" );
 
 		return messages;
 	}
