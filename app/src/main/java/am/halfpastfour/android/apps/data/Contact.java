@@ -1,8 +1,13 @@
 package am.halfpastfour.android.apps.data;
 
+import android.content.Context;
 import android.database.Cursor;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.provider.ContactsContract;
 import android.util.Log;
+
+import java.io.InputStream;
 
 /**
  * Created by bobkruithof on 27/01/15.
@@ -72,7 +77,6 @@ public class Contact
 	 * @param id
 	 */
 	public void setId( String id ) {
-		Log.i( TAG, "Setting id to " + id );
 		this.id = id;
 	}
 
@@ -92,7 +96,6 @@ public class Contact
 	 * @param name
 	 */
 	public void setName( String name ) {
-		Log.i( TAG, "Setting name to " + name );
 		this.name = name;
 	}
 
@@ -109,7 +112,6 @@ public class Contact
 	 * @param number
 	 */
 	public void setNumber( String number ) {
-		Log.i( TAG, "Setting number to " + number );
 		this.number = number;
 	}
 
@@ -126,7 +128,6 @@ public class Contact
 	 * @param normalizedNumber
 	 */
 	public void setNormalizedNumber( String normalizedNumber ) {
-		Log.i( TAG, "Setting normalized number to " + normalizedNumber );
 		this.normalizedNumber = normalizedNumber;
 	}
 
@@ -135,6 +136,7 @@ public class Contact
 	 * @return String
 	 */
 	public String getPhotoThumbnailUri() {
+		Log.i( TAG, "Returning thumbnail uri " + this.photoThumbnailUri );
 		return this.photoThumbnailUri;
 	}
 
@@ -142,9 +144,29 @@ public class Contact
 	 * Sets the contact's photo thumbnail uri
 	 * @param setPhotoThumbnailUri
 	 */
-	public void setPhotoThumbnailUri( String setPhotoThumbnailUri ) {
-		Log.i( TAG, "Setting photo thumbnail uri " + setPhotoThumbnailUri );
-		this.photoThumbnailUri = setPhotoThumbnailUri;
+	public void setPhotoThumbnailUri( String photoThumbnailUri ) {
+		Log.i( TAG, "Setting photo thumbnail uri to " + photoThumbnailUri );
+		this.photoThumbnailUri = photoThumbnailUri;
+	}
+
+	public Drawable getPhotoThumbnailDrawable( Context context )
+	{
+		if( this.getPhotoThumbnailUri() == "" || this.getPhotoThumbnailUri() == null ) {
+			return null;
+		}
+
+		Drawable	drawable	= null;
+
+		try {
+			Uri			uri			= Uri.parse( this.getPhotoThumbnailUri() );
+			InputStream inputStream	= context.getContentResolver().openInputStream( uri );
+			drawable = Drawable.createFromStream( inputStream, uri.toString() );
+		} catch( Exception exception ) {
+			Log.i( TAG, "An exception occurred" );
+			exception.printStackTrace();
+		}
+
+		return drawable;
 	}
 
 	/**
@@ -160,7 +182,6 @@ public class Contact
 	 * @param type
 	 */
 	public void setType( String type ) {
-		Log.i( TAG, "Setting type to " + type );
 		this.type = type;
 	}
 }

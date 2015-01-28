@@ -1,11 +1,8 @@
 package am.halfpastfour.texter.lib;
 
 import android.content.Context;
-import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
-import android.net.Uri;
-import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +15,6 @@ import java.util.List;
 
 import am.halfpastfour.android.apps.data.Contact;
 import am.halfpastfour.android.apps.data.SMSConversation;
-import am.halfpastfour.android.apps.data.SMSData;
 import am.halfpastfour.texter.R;
 
 /**
@@ -45,8 +41,9 @@ public class SMSAdapter extends ArrayAdapter<SMSConversation>
 		}
 
 		// Lookup view for data population
-		TextView tvNumber = (TextView) convertView.findViewById( R.id.tvNumber );
-		TextView tvMessage = (TextView) convertView.findViewById( R.id.tvMessage );
+		TextView	tvNumber		= (TextView)	convertView.findViewById( R.id.tvNumber );
+		TextView	tvMessage		= (TextView) 	convertView.findViewById( R.id.tvMessage );
+		ImageView	ivContactImage	= (ImageView)	convertView.findViewById( R.id.image_contact );
 
 		// Get contact name(s) from conversation
 		ArrayList<Contact> contacts = conversation.getContacts( getContext() );
@@ -62,13 +59,22 @@ public class SMSAdapter extends ArrayAdapter<SMSConversation>
 		tvNumber.setText( am.halfpastfour.android.apps.utils.Strings.join( names, ", " ) );
 		tvMessage.setText( conversation.getSnippet() );
 
-		BitmapDrawable resourceImage	= (BitmapDrawable) getContext().getResources().getDrawable( R.drawable.image_newyork_ribbonstore );
-		Bitmap bitmap					= ImageHelper.getRoundedCornerBitmap( resourceImage.getBitmap(), 5000 );
-		ImageView image					= (ImageView) convertView.findViewById( R.id.image_contact );
-		image.setMaxWidth( 150 );
-		image.setMaxHeight( 150 );
+		BitmapDrawable resourceImage	= null;
 
-		image.setImageBitmap( bitmap );
+		if( contacts.size() == 1 ) {
+			resourceImage = (BitmapDrawable) contacts.get( 0 ).getPhotoThumbnailDrawable( getContext() );
+		}
+
+		if( resourceImage == null ) {
+			resourceImage = (BitmapDrawable) getContext().getResources().getDrawable( R.drawable.image_newyork_ribbonstore );
+		}
+
+
+		Bitmap bitmap = ImageHelper.getRoundedCornerBitmap( resourceImage.getBitmap(), 5000 );
+		ivContactImage.setMaxWidth( 150 );
+		ivContactImage.setMaxHeight( 150 );
+
+		ivContactImage.setImageBitmap( bitmap );
 
 		return convertView;
 	}

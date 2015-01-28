@@ -28,11 +28,11 @@ public class FragmentMain extends ListFragment
 		this.onCreateView( inflater, container, savedInstanceState );
 
 		View view						= inflater.inflate( R.layout.fragment_main, container, false );
-		BitmapDrawable resourceImage	= (BitmapDrawable) getResources().getDrawable( R.drawable.image_newyork_ribbonstore );
-		Bitmap bitmap					= ImageHelper.getRoundedCornerBitmap( resourceImage.getBitmap(), 200 );
-		ImageView image					= (ImageView) view.findViewById( R.id.image_contact );
-
-		image.setImageBitmap( bitmap );
+//		BitmapDrawable resourceImage	= (BitmapDrawable) getResources().getDrawable( R.drawable.image_newyork_ribbonstore );
+//		Bitmap bitmap					= ImageHelper.getRoundedCornerBitmap( resourceImage.getBitmap(), 200 );
+//		ImageView image					= (ImageView) view.findViewById( R.id.image_contact );
+//
+//		image.setImageBitmap( bitmap );
 		return view;
 	}
 }
