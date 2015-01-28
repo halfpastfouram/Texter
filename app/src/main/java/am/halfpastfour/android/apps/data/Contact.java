@@ -142,7 +142,7 @@ public class Contact
 
 	/**
 	 * Sets the contact's photo thumbnail uri
-	 * @param setPhotoThumbnailUri
+	 * @param photoThumbnailUri
 	 */
 	public void setPhotoThumbnailUri( String photoThumbnailUri ) {
 		Log.i( TAG, "Setting photo thumbnail uri to " + photoThumbnailUri );
