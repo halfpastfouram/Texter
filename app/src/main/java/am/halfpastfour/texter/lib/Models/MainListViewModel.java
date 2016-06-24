@@ -27,25 +27,24 @@ public class MainListViewModel
 
 		Cursor cursor;
 		cursor = contentResolver.query( message, new String[]{
-			Telephony.Sms.Conversations.THREAD_ID, Telephony.Sms.Conversations.SNIPPET, Telephony.Sms.Conversations.MESSAGE_COUNT
+				Telephony.Sms.Conversations.THREAD_ID,
+				Telephony.Sms.Conversations.SNIPPET,
+				Telephony.Sms.Conversations.MESSAGE_COUNT
 		}, null, null, Telephony.Sms.Conversations.DEFAULT_SORT_ORDER );
 		context.startManagingCursor( cursor );
 
-		int totalConversations	= cursor.getCount();
-		if( cursor.moveToFirst() ) {
-			for( int i = 0; i < totalConversations; i++ ) {
-				smsConversation	= new SMSConversation( cursor );
+		int totalConversations = cursor.getCount();
+		if ( cursor.moveToFirst() ) {
+			for ( int i = 0; i < totalConversations; i++ ) {
+				smsConversation = new SMSConversation( cursor );
 				conversations.add( smsConversation );
 				cursor.moveToNext();
 			}
 		}
-		cursor.close();
-
 		return conversations;
 	}
 
-	public ArrayList<SMSData> getAllSmsInConversation( Context context, String threadId )
-	{
+	public ArrayList<SMSData> getAllSmsInConversation( Context context, String threadId ) {
 		ArrayList<SMSData> messages = new ArrayList<>();
 		SMSData message;
 		Uri messageUri = Uri.parse( "content://sms/" );
@@ -62,16 +61,14 @@ public class MainListViewModel
 				Telephony.Sms.TYPE
 		}, null, null, Telephony.Sms.DEFAULT_SORT_ORDER );
 
-		int totalMessages	= cursor.getCount();
-		if( cursor.moveToFirst() ) {
-			for( int i = 0; i < totalMessages; i++ ) {
-				message	= new SMSData( cursor );
+		int totalMessages = cursor.getCount();
+		if ( cursor.moveToFirst() ) {
+			for ( int i = 0; i < totalMessages; i++ ) {
+				message = new SMSData( cursor );
 				messages.add( message );
 				cursor.moveToNext();
 			}
 		}
-		cursor.close();
-
 		return messages;
 	}
 

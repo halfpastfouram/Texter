@@ -11,7 +11,6 @@ import java.util.List;
 
 /**
  * Created by bobkruithof on 27/01/15.
- * Project: Texter
  * Package: am.halfpastfour.android.apps.data
  */
 public class SMSData {
@@ -56,8 +55,6 @@ public class SMSData {
 				Log.i( TAG + " getContactName", "Adding " + numbers[ i ] + " to the list of names" );
 				names.add( numbers[ i ] );
 			}
-
-			cursor.close();
 		}
 
 		return am.halfpastfour.android.apps.utils.Strings.join( names, ", " );

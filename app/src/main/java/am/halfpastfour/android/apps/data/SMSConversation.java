@@ -13,7 +13,6 @@ import am.halfpastfour.texter.lib.Models.MainListViewModel;
 
 /**
  * Created by bobkruithof on 27/01/15.
- * Project: Texter
  * Package: am.halfpastfour.android.apps.data
  */
 public class SMSConversation {
@@ -127,8 +126,6 @@ public class SMSConversation {
 					// The phone number is not in the contact list
 					contacts.add( new Contact( null, addresses[ i ] ) );
 				}
-
-				cursor.close();
 			}
 
 			this.contacts	= contacts;

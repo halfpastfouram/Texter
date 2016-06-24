@@ -15,6 +15,7 @@ import java.util.List;
 
 import am.halfpastfour.android.apps.data.Contact;
 import am.halfpastfour.android.apps.data.SMSConversation;
+import am.halfpastfour.android.apps.utils.ImageHelper;
 import am.halfpastfour.texter.R;
 
 /**
@@ -59,22 +60,22 @@ public class SMSAdapter extends ArrayAdapter<SMSConversation>
 		tvNumber.setText( am.halfpastfour.android.apps.utils.Strings.join( names, ", " ) );
 		tvMessage.setText( conversation.getSnippet() );
 
-		BitmapDrawable resourceImage	= null;
-
-		if( contacts.size() == 1 ) {
-			resourceImage = (BitmapDrawable) contacts.get( 0 ).getPhotoThumbnailDrawable( getContext() );
-		}
-
-		if( resourceImage == null ) {
-			resourceImage = (BitmapDrawable) getContext().getResources().getDrawable( R.drawable.image_newyork_ribbonstore );
-		}
-
-
-		Bitmap bitmap = ImageHelper.getRoundedCornerBitmap( resourceImage.getBitmap(), 5000 );
-		ivContactImage.setMaxWidth( 150 );
-		ivContactImage.setMaxHeight( 150 );
-
-		ivContactImage.setImageBitmap( bitmap );
+//		BitmapDrawable resourceImage	= null;
+//
+//		if( contacts.size() == 1 ) {
+//			resourceImage = (BitmapDrawable) contacts.get( 0 ).getPhotoThumbnailDrawable( getContext() );
+//		}
+//
+//		if( resourceImage == null ) {
+//			resourceImage = (BitmapDrawable) getContext().getResources().getDrawable( R.drawable.image_newyork_ribbonstore );
+//		}
+//
+//
+//		Bitmap bitmap = ImageHelper.getRoundedCornerBitmap( resourceImage.getBitmap(), 5000 );
+//		ivContactImage.setMaxWidth( 150 );
+//		ivContactImage.setMaxHeight( 150 );
+//
+//		ivContactImage.setImageBitmap( bitmap );
 
 		return convertView;
 	}
