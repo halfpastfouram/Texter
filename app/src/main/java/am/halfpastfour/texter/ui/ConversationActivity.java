@@ -1,4 +1,4 @@
-package am.halfpastfour.texter;
+package am.halfpastfour.texter.ui;
 
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
@@ -10,6 +10,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
+
+import am.halfpastfour.texter.R;
 
 /**
  * Created by bobkruithof on 28/01/15.

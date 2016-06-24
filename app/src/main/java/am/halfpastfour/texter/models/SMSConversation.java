@@ -1,4 +1,4 @@
-package am.halfpastfour.android.apps.data;
+package am.halfpastfour.texter.models;
 
 import android.app.Activity;
 import android.content.Context;
@@ -9,7 +9,7 @@ import android.provider.Telephony;
 
 import java.util.ArrayList;
 
-import am.halfpastfour.texter.lib.Models.MainListViewModel;
+import am.halfpastfour.texter.models.view.MainListView;
 
 /**
  * Created by bobkruithof on 27/01/15.
@@ -141,7 +141,7 @@ public class SMSConversation {
 	 */
 	public ArrayList<SMSData> getMessages( Activity context )
 	{
-		MainListViewModel model = new MainListViewModel();
+		MainListView model = new MainListView();
 		return model.getAllSmsInConversation( context, this.getThreadId() );
 	}
 }

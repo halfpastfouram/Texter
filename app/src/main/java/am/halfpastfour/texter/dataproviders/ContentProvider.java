@@ -1,4 +1,4 @@
-package am.halfpastfour.android.apps.data;
+package am.halfpastfour.texter.dataproviders;
 
 import android.database.sqlite.SQLiteDatabase;
 

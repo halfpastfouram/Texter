@@ -1,10 +1,12 @@
-package am.halfpastfour.texter;
+package am.halfpastfour.texter.ui;
 
 import android.view.LayoutInflater;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.ViewGroup;
 import android.view.View;
+
+import am.halfpastfour.texter.R;
 
 /**
  * Created by bobkruithof on 27/01/15.

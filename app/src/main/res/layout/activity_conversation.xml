@@ -3,5 +3,5 @@
              android:id="@+id/container"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             tools:context="am.halfpastfour.texter.ConversationActivity"
+             tools:context="am.halfpastfour.texter.ui.ConversationActivity"
              tools:ignore="MergeRootFrame"/>

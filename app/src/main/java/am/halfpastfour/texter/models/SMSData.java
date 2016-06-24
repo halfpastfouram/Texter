@@ -1,4 +1,4 @@
-package am.halfpastfour.android.apps.data;
+package am.halfpastfour.texter.models;
 
 import android.content.Context;
 import android.database.Cursor;

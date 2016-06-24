@@ -1,4 +1,4 @@
-package am.halfpastfour.texter.lib;
+package am.halfpastfour.android.apps.utils;
 
 import java.security.SecureRandom;
 

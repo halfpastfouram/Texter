@@ -1,8 +1,6 @@
-package am.halfpastfour.texter.lib;
+package am.halfpastfour.android.apps.utils;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,10 +11,9 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-import am.halfpastfour.android.apps.data.Contact;
-import am.halfpastfour.android.apps.data.SMSConversation;
-import am.halfpastfour.android.apps.utils.ImageHelper;
 import am.halfpastfour.texter.R;
+import am.halfpastfour.texter.models.Contact;
+import am.halfpastfour.texter.models.SMSConversation;
 
 /**
  * Created by bobkruithof on 27/01/15.

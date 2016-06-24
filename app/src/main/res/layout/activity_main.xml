@@ -8,7 +8,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
 
     <!-- The main content view -->
     <FrameLayout
@@ -20,7 +20,7 @@
             android:layout_height="fill_parent"
             android:id="@+id/listView"
             android:clickable="false"
-            class="am.halfpastfour.texter.FragmentMain" />
+            class="am.halfpastfour.texter.ui.FragmentMain" />
     </FrameLayout>
 
     <!-- The navigation drawer -->
