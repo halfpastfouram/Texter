@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<preference-headers
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <header
+        android:fragment="am.halfpastfour.texter.ui.FragmentPreference"
+        android:title="About"
+        android:summary="Information about the app" />
+
+</preference-headers>

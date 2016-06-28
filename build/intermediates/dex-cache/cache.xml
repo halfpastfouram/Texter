@@ -3,30 +3,12 @@
 
     <item
         is-multidex="true"
-        jar="/Users/bobkruithof/Android Studio Workspace/Texter/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/jars/classes.jar"
+        jar="/Users/bobkruithof/Documents/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
         jumboMode="true"
         optimize="false"
         revision="21.1.1"
-        sha1="7ae2d38807a43b2f2185ff4089a92c790b579e54">
-        <dex dex="/Users/bobkruithof/Android Studio Workspace/Texter/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-21.0.2_28c1ffe742bbc145db67ae94b7b29d0560c87f2a/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/bobkruithof/Android Studio Workspace/Texter/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.2/jars/classes.jar"
-        jumboMode="true"
-        optimize="false"
-        revision="21.1.1"
-        sha1="d1bf02de1c56d942e7a9d093b8610ba1ef4128e3">
-        <dex dex="/Users/bobkruithof/Android Studio Workspace/Texter/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-21.0.2_57e72b9c815913c439016994bf68fe71617e5008/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/bobkruithof/Documents/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.2/support-annotations-21.0.2.jar"
-        jumboMode="true"
-        optimize="false"
-        revision="21.1.1"
-        sha1="99373741f99a0556ee293c41e8faa1ca3ae8a4e6">
-        <dex dex="/Users/bobkruithof/Android Studio Workspace/Texter/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-21.0.2_123f8e1db61a7243088a420ed0f24eee9f0f4f36/classes.dex" />
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/Users/bobkruithof/Android Studio Workspace/Texter/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.0.1_a9e4cc7d0f39212a06e6545a956d962d618c1d6f/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -34,7 +16,7 @@
         jumboMode="true"
         optimize="false"
         revision="21.1.1"
-        sha1="3116a7956fe21daa0ce78788f27950dd398554ea">
+        sha1="067d3c0b2f8885061b5cb114a5ba116216d2af9b">
         <dex dex="/Users/bobkruithof/Android Studio Workspace/Texter/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_492d6383d465c26da5210fe3e90b15d2eb522b86/classes.dex" />
     </item>
     <item
@@ -48,21 +30,39 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/bobkruithof/Android Studio Workspace/Texter/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
+        jumboMode="true"
+        optimize="false"
+        revision="21.1.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/Users/bobkruithof/Android Studio Workspace/Texter/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.0.1_0e79f479b01dcedd318c445a035e51361fed15a6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/bobkruithof/Android Studio Workspace/Texter/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="false"
         revision="21.1.1"
-        sha1="b3f06561c813afd235f8c72aef67557d865f5dd4">
+        sha1="aa0406889c41ccf8ce4d1b5abd08e26f4f20bbda">
         <dex dex="/Users/bobkruithof/Android Studio Workspace/Texter/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_68a69ac0885a47cef30a99a423841ff59c35a32b/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/bobkruithof/Android Studio Workspace/Texter/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.2/jars/libs/internal_impl-21.0.2.jar"
+        jar="/Users/bobkruithof/Android Studio Workspace/Texter/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
         jumboMode="true"
         optimize="false"
         revision="21.1.1"
-        sha1="962e8b12569c56dbdcf8367eb4eac8bb129cd18f">
-        <dex dex="/Users/bobkruithof/Android Studio Workspace/Texter/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-21.0.2_a0c32288bf0e1f07880833eb62c0f484cb4fe99e/classes.dex" />
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/Users/bobkruithof/Android Studio Workspace/Texter/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.0.1_2a803747fac13d3b7ddec1de6958f87976363809/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/bobkruithof/Android Studio Workspace/Texter/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="false"
+        revision="21.1.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/bobkruithof/Android Studio Workspace/Texter/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.0.1_14ee925c6c4818c0e7fab04b73f3e95c6cfa897d/classes.dex" />
     </item>
 
 </items>

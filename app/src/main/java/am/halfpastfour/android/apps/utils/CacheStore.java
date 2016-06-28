@@ -26,22 +26,37 @@ import java.util.HashMap;
 
 public class CacheStore
 {
-	private static String     TAG      = "CacheStore";
-	private static CacheStore INSTANCE = null;
 	private HashMap<String, String> cacheMap;
 	private HashMap<String, Bitmap> bitmapMap;
-	private static final String cacheDir       = "/Android/data/am.halfpastfour.data/cache/";
-	private static final String CACHE_FILENAME = ".cache";
+	private static       String     TAG            = "CacheStore";
+	private static       CacheStore INSTANCE       = null;
+	private static final String     cacheDirRoot   = "/Android/data/am.halfpastfour.texter/cache/";
+	private static final String     CACHE_FILENAME = ".cache";
+	private static       String     cacheDir       = cacheDirRoot;
+
+	/**
+	 * Set the cache directory
+	 *
+	 * @param p_directoryName The name of the directory
+	 */
+	public static void setCacheDirectory( String p_directoryName )
+	{
+		cacheDir	= cacheDirRoot + p_directoryName;
+		getInstance().initialize();
+	}
 
 	@SuppressWarnings( "unchecked" )
 	private CacheStore()
 	{
+		initialize();
+	}
+
+	private void initialize()
+	{
 		cacheMap			= new HashMap<String, String>();
 		bitmapMap			= new HashMap<String, Bitmap>();
-		File fullCacheDir	= new File(
-			Environment.getExternalStorageDirectory().toString(),
-			cacheDir
-		);
+		String	externalStorageDirectory	= Environment.getExternalStorageDirectory().toString();
+		File	fullCacheDir				= new File( externalStorageDirectory, cacheDir );
 
 		if ( !fullCacheDir.exists() ) {
 			Log.i( "CACHE", "Directory doesn't exist" );
@@ -49,11 +64,11 @@ public class CacheStore
 			return;
 		}
 		try {
-			ObjectInputStream
-				is = new ObjectInputStream( new BufferedInputStream( new FileInputStream( new File(
-				fullCacheDir.toString(), CACHE_FILENAME ) ) ) );
-			cacheMap = (HashMap<String, String>) is.readObject();
-			is.close();
+			ObjectInputStream inputStream	= new ObjectInputStream( new BufferedInputStream(
+				new FileInputStream( new File( fullCacheDir.toString(), CACHE_FILENAME ) )
+			) );
+			cacheMap	= (HashMap<String, String>) inputStream.readObject();
+			inputStream.close();
 		} catch ( StreamCorruptedException e ) {
 			Log.i( "CACHE", "Corrupted stream" );
 			cleanCacheStart();
@@ -102,13 +117,13 @@ public class CacheStore
 
 	public void saveCacheFile( String cacheUri, Bitmap image )
 	{
-		File             fullCacheDir = new File(
+		File fullCacheDir = new File(
 			Environment.getExternalStorageDirectory().toString(),
 			cacheDir
 		);
 		String fileLocalName = new SimpleDateFormat( "ddMMyyhhmmssSSS" )
 			.format( new java.util.Date() ) + ".PNG";
-		File             fileUri      = new File( fullCacheDir.toString(), fileLocalName );
+		File             fileUri = new File( fullCacheDir.toString(), fileLocalName );
 		FileOutputStream outStream;
 
 		try {
@@ -143,16 +158,21 @@ public class CacheStore
 		}
 	}
 
+	/**
+	 *
+	 * @param cacheUri The uri for the given cached image
+	 * @return
+	 */
 	public Bitmap getCacheFile( String cacheUri )
 	{
-		if ( bitmapMap.containsKey( cacheUri ) ) return (Bitmap) bitmapMap.get( cacheUri );
+		if ( bitmapMap.containsKey( cacheUri ) ) return bitmapMap.get( cacheUri );
 		if ( !cacheMap.containsKey( cacheUri ) ) return null;
 		String fileLocalName = cacheMap.get( cacheUri );
-		File   fullCacheDir  = new File(
+		File fullCacheDir = new File(
 			Environment.getExternalStorageDirectory().toString(),
 			cacheDir
 		);
-		File   fileUri       = new File( fullCacheDir.toString(), fileLocalName );
+		File fileUri = new File( fullCacheDir.toString(), fileLocalName );
 		if ( !fileUri.exists() ) return null;
 		Log.i( "CACHE", "File " + cacheUri + " has been found in the Cache" );
 		Bitmap bm = BitmapFactory.decodeFile( fileUri.toString() );
